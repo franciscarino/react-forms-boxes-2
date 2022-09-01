@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import {v4 as uuid} from 'uuid';
 
 function NewBoxForm({ addBox }) {
   const initialState = { backgroundColor: "", width: "", height: "" };
   const [formData, setFormData] = useState(initialState);
+
 
   /** Send {backgroundColor, width, height} to parent
    *    & clear form. */
@@ -44,7 +46,7 @@ function NewBoxForm({ addBox }) {
 
       <label htmlFor="backgroundColor">Background Color:</label>
       <input
-        type="number"
+        type="text"
         id="backgroundColor"
         name="backgroundColor"
         value={formData.backgroundColor}
