@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import {v4 as uuid} from 'uuid';
 
+/**
+ * Render form to add a new box
+ *
+ * Prop: addBox
+ *
+ * State: formdata
+ */
 function NewBoxForm({ addBox }) {
   const initialState = { backgroundColor: "", width: "", height: "" };
   const [formData, setFormData] = useState(initialState);
-
 
   /** Send {backgroundColor, width, height} to parent
    *    & clear form. */

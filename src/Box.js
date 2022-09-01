@@ -1,9 +1,14 @@
 import React from "react";
 
-
-function Box({key, id, backgroundColor, width, height, remove }) {
-  function removeBox(){
-    remove(id)
+/**
+ * Render Box and Remove button
+ *
+ * Props: id, backgroundColor, width, height, remove
+ *
+ */
+function Box({ id, backgroundColor, width, height, remove }) {
+  function removeBox() {
+    remove(id);
   }
 
   return (
