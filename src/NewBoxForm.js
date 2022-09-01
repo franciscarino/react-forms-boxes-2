@@ -31,32 +31,36 @@ function NewBoxForm({ addBox }) {
   /** render form */
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="width">Width:</label>
-      <input
-        type="number"
-        id="width"
-        name="width"
-        value={formData.width}
-        onChange={handleChange}
-      />
-
-      <label htmlFor="height">Height:</label>
-      <input
-        type="number"
-        id="height"
-        name="height"
-        value={formData.height}
-        onChange={handleChange}
-      />
-
-      <label htmlFor="backgroundColor">Background Color:</label>
-      <input
-        type="text"
-        id="backgroundColor"
-        name="backgroundColor"
-        value={formData.backgroundColor}
-        onChange={handleChange}
-      />
+      <div>
+        <label htmlFor="width">Width:</label>
+        <input
+          type="number"
+          id="width"
+          name="width"
+          value={formData.width}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="height">Height:</label>
+        <input
+          type="number"
+          id="height"
+          name="height"
+          value={formData.height}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="backgroundColor">Background Color:</label>
+        <input
+          type="text"
+          id="backgroundColor"
+          name="backgroundColor"
+          value={formData.backgroundColor}
+          onChange={handleChange}
+        />
+      </div>
 
       <button>Add a new box!</button>
     </form>

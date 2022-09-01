@@ -14,7 +14,7 @@ function Boxlist() {
 
   /** Add a new Box */
   function addBox(box) {
-    let newBox = { ...box, id: uuid() };
+    const newBox = { ...box, id: uuid() };
     setBoxes((boxes) => [...boxes, newBox]);
   }
 
@@ -28,16 +28,16 @@ function Boxlist() {
       <NewBoxForm addBox={addBox} />
       <ul>
         {boxes.map((box) => (
-          <li>
-            <Box
-              key={box.id}
-              id={box.id}
-              width={box.width}
-              height={box.height}
-              backgroundColor={box.backgroundColor}
-              remove={remove}
-            />
-          </li>
+          // wrapped item gets key
+
+          <Box
+            key={box.id}
+            id={box.id}
+            width={box.width}
+            height={box.height}
+            backgroundColor={box.backgroundColor}
+            remove={remove}
+          />
         ))}
       </ul>
     </div>

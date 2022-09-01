@@ -12,7 +12,7 @@ function Box({ id, backgroundColor, width, height, remove }) {
   }
 
   return (
-    <div>
+    <li>
       <div
         style={{
           backgroundColor: backgroundColor,
@@ -21,7 +21,7 @@ function Box({ id, backgroundColor, width, height, remove }) {
         }}
       ></div>
       <button onClick={removeBox}>Remove Box</button>
-    </div>
+    </li>
   );
 }
 
